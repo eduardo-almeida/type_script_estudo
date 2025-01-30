@@ -32,33 +32,17 @@ var __importStar = (this && this.__importStar) || (function () {
         return result;
     };
 })();
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
-// 1 - importação de arquivos
-const greet_js_1 = __importDefault(require("./greet.js"));
-(0, greet_js_1.default)();
-// 2 - import de variavel
-const variable_js_1 = require("./variable.js");
-console.log(variable_js_1.x);
-// 3 - multiplas exportacoes
-const multiple_1 = require("./multiple");
-console.log(multiple_1.a);
-console.log(multiple_1.b);
-(0, multiple_1.myExportFunction)();
-// 4 - alias
-const changename_js_1 = require("./changename.js");
-console.log(changename_js_1.someName);
-// 5 - import all
-const myNumbers = __importStar(require("./numbers.js"));
-console.log(myNumbers);
-console.log(myNumbers.n1);
-class User {
-    constructor(name, age) {
-        this.name = name;
-        this.age = age;
-    }
-}
-const joao = new User("João", 25);
-console.log(joao);
+const react_1 = __importStar(require("react"));
+const App_1 = require("../App");
+const Context = () => {
+    const details = (0, react_1.useContext)(App_1.AppContext);
+    return (<>
+        {details && (<div>
+            <h2>Linguagem: {details.language}</h2>
+            <h4>FW: {details.framework}</h4>
+            <p>Qtd: {details.projects}</p>
+            </div>)}
+        </>);
+};
+exports.default = Context;

@@ -25,10 +25,7 @@ console.log(firstElement([true, false]));
 console.log(firstElement([]));
 // firstElement('a')
 function mergeObjects(obj1, obj2) {
-    return {
-        ...obj1,
-        ...obj2,
-    };
+    return Object.assign(Object.assign({}, obj1), obj2);
 }
 const newObj = mergeObjects({ name: 'Matheus' }, { age: 30 });
 console.log(newObj);
