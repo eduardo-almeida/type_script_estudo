@@ -2,11 +2,11 @@ const primeiroNome = "Eduardo";
 
 const sobrenome = "Almeida";
 
-function teste(name: string) {
+function teste1(name: string): void {
   console.log("Ola " + name);
 }
 
-function showNumbers(a: number, b?: number, c?: number) {
+function showNumbers22(a: number, b?: number, c?: number): void {
   console.log("A: " + a);
   if (b) {
     console.log("B: " + b);
@@ -16,6 +16,6 @@ function showNumbers(a: number, b?: number, c?: number) {
   }
 }
 
-showNumbers(1, c : 2);
+showNumbers22(2);
 
-teste(primeiroNome);
+teste1(primeiroNome);

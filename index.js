@@ -1,10 +1,10 @@
 "use strict";
 const primeiroNome = "Eduardo";
 const sobrenome = "Almeida";
-function teste(name) {
+function teste1(name) {
     console.log("Ola " + name);
 }
-function showNumbers(a, b, c) {
+function showNumbers22(a, b, c) {
     console.log("A: " + a);
     if (b) {
         console.log("B: " + b);
@@ -13,5 +13,5 @@ function showNumbers(a, b, c) {
         console.log("C: " + c);
     }
 }
-showNumbers(1, c, 2);
-teste(primeiroNome);
+showNumbers22(2);
+teste1(primeiroNome);
